@@ -1,0 +1,5 @@
+@mixin font-details($size, $weight, $family: 'Roboto') {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}

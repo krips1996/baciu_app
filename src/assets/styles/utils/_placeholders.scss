@@ -1,0 +1,32 @@
+.bottom-line {
+  position: absolute;
+  display: block;
+  width: calc(100% - 10px);
+  height: 3px;
+  top: auto;
+  left: 5px;
+  bottom: -4px;
+  border: 1px solid $border-primary-color;
+  border-top: none;
+  background-color: $white;
+}
+
+%bottom-decoration {
+  @extend .bottom-line;
+
+  &::before {
+    content: "";
+    @extend .bottom-line;
+  }
+}
+
+%sidebar-title {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: $text-color-dark;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Roboto';
+}
