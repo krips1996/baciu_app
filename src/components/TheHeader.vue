@@ -2,20 +2,29 @@
   <div class="continer-fluid">
     <div class="row header">
       <div class="col-3 logo">
-        <a href="#" class="logo-text" title="Creative+">Creative<sup class="logo-symbol">+</sup></a>
+        <a href="#" class="logo-text" title="Creative+"> SCICS<sup class="logo-symbol">+</sup> </a>
       </div>
-      <div class="col-9 navigation"><the-navigation /></div>
+      <div class="col-9 navigation">
+        <template v-if="user.type"><button @click="logout">logout</button></template>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import TheNavigation from './TheNavigation.vue';
+import { Store } from '../utils/store/store';
 
 export default {
   name: 'TheHeader',
-  components: {
-    TheNavigation
+  methods: {
+    logout() {
+      Store.logout();
+    }
+  },
+  computed: {
+    user() {
+      return Store.$data.user;
+    }
   }
 };
 </script>
@@ -32,7 +41,22 @@ export default {
   .navigation {
     position: relative;
     height: 45px;
+    padding-right: 45px;
     color: $text-color-light;
+
+    & > button {
+      float: right;
+      outline: none;
+      margin-top: 8px;
+      border: none;
+      background-color: transparent;
+      color: $white;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $orange;
+      }
+    }
   }
 
   .logo {

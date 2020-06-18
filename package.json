@@ -11,7 +11,10 @@
     "core-js": "^3.6.4",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-nav-tabs": "^0.5.7",
+    "vue-single-date-picker": "^0.5.8",
+    "vue-table-dynamic": "^0.2.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
@@ -20,6 +23,7 @@
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.1",

@@ -1,21 +1,18 @@
 <template>
   <div class="container content">
     <div class="row">
-      <div class="col-8"><page-posts /></div>
-      <div class="col-4"><page-sidebar /></div>
+      <div class="col-12"><admin-page /></div>
     </div>
   </div>
 </template>
 
 <script>
-import PagePosts from './PagePosts.vue';
-import PageSidebar from './PageSidebar.vue';
+import AdminPage from './AdminPage.vue';
 
 export default {
   name: 'TheContent',
   components: {
-    PagePosts,
-    PageSidebar
+    AdminPage
   }
 };
 </script>
